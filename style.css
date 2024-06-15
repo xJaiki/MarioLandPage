@@ -1,6 +1,5 @@
 html {
   cursor: none;
-  /* grey dark grey black gradient  */
   background: linear-gradient(-45deg, #333, #222, #111);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
@@ -9,6 +8,7 @@ html {
   margin: 0;
   padding: 0;
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -29,10 +29,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   margin: 0;
   padding: 0;
 }
+
 #grain {
   position: fixed;
   top: 0;
@@ -52,17 +52,22 @@ body {
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
 }
 
- h1 {
+h1 {
   color: #f5c05d;
   font-size: 7em;
   margin: 5em;
   transform: translateZ(100px);
   transition: font-size 0.2s;
-  /* soft glow */
   text-shadow: 0 0 10px #f5c05d28, 0 0 20px #f5c05d28, 0 0 30px #f5c05d28, 0 0 40px #f5c05d28, 0 0 55px #f5c05d28, 0 0 75px #f5c05d28, 0 0 90px #f5c05d28;
 }
+
 .cursor {
   display: none;
   position: absolute;
@@ -75,5 +80,16 @@ body {
   z-index: 9999;
   transition: width 0.1s, height 0.1s;
   box-shadow: 0 0 15px 20px #333;
+}
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+    margin: 0.5em;
+  }
+  
+  .card {
+    padding: 10px;
+  }
 }
